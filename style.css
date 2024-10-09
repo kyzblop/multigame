@@ -1,24 +1,77 @@
 body{
     margin: 0;
 
-    background-color: rgb(186, 186, 186);
+    text-align: center;
+    font-size: large;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+    background-image: url(images/img_casino2.jpg);
+    background-size: cover;
 }
+
+a{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+    text-decoration: none;
+}
+
 
 .navbar{
     display: flex;
     flex-direction: row;
 
     justify-content: center;
-
     height: 100px;
 
-    background: linear-gradient(red, rgb(186, 186, 186));
-    color: white;
+    background: linear-gradient(red, transparent);
     font-size: x-large;
+    letter-spacing: 20px;
+}
+
+.navbar{
+    color: black;
+    text-decoration: none;
 }
 
 main{
     margin: 100px 15% 100px 15%;
 
-    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    
+    text-align: center;
+
+    margin: 10px;
+
+    width: 400px;
+    height: 200px;
+
+    border-radius: 30%;
+
+    background-image: url(images/tablePoker.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.card img{
+    width: 30%;
+    height: 40%;
+
+    position: relative;
+    top: 25%;
+}
+
+.card p{
+    position: relative;
+    top: 25%;
 }

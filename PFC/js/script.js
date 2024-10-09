@@ -7,13 +7,13 @@ function choixAdverse(){
 
     if(n == 0){
         mainAdverse = "pierre"
-        document.getElementById("img_point_intero").setAttribute("src", "PFC/images/pierre.jpg") 
+        document.getElementById("img_point_intero").setAttribute("src", "images/pierre.jpg") 
     } else if(n == 1){
         mainAdverse = "feuille"
-        document.getElementById("img_point_intero").setAttribute("src", "PFC/images/feuille.jpg") 
+        document.getElementById("img_point_intero").setAttribute("src", "images/feuille.jpg") 
     } else if(n == 2){
         mainAdverse = "ciseaux"
-        document.getElementById("img_point_intero").setAttribute("src", "PFC/images/ciseaux.jpg") 
+        document.getElementById("img_point_intero").setAttribute("src", "images/ciseaux.jpg") 
     }
 
 }
