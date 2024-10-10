@@ -12,6 +12,16 @@ body{
 
     background-image: url(images/img_casino2.jpg);
     background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 30px;
 }
 
 a{
@@ -33,11 +43,7 @@ a{
     background: linear-gradient(red, transparent);
     font-size: x-large;
     letter-spacing: 20px;
-}
-
-.navbar{
-    color: black;
-    text-decoration: none;
+    padding-left: 20px;
 }
 
 main{
@@ -45,9 +51,13 @@ main{
 
     display: flex;
     flex-direction: row;
+
+    justify-content: space-between;
 }
 
 .card{
+
+    display: 1;
     
     text-align: center;
 
@@ -64,11 +74,13 @@ main{
 }
 
 .card img{
-    width: 30%;
-    height: 40%;
+    width: 25%;
+    height: 30%;
 
     position: relative;
     top: 25%;
+
+    border: double 10px black;
 }
 
 .card p{
