@@ -5,14 +5,11 @@ let nbBatonEnleveAdverse = 0;
 
 let textAdvsersaire = document.getElementById("nimAdvserse")
 
-document.getElementById("nimAdverse").hidden = true;
-
 function jouer(){
 
     // Verifier la victoire
     if(nbBatons == 1){
-        alert("Vous avez gagné !")
-        window.location.reload()
+        document.getElementById("victoire").style.display = "block"
     }
 
     // Cacher les elements du joueur
@@ -20,10 +17,11 @@ function jouer(){
     document.getElementById("aVousJouer").hidden = true;
     document.getElementById("passerMain").hidden = true;
 
-    // Montrer l'element de l'adversaire
-    document.getElementById("nimAdverse").hidden = false;
 
     // L'adversaire reflechit
+    document.getElementById("nimAdverse").hidden = false;
+    document.getElementById("nimAdverse").innerHTML = `<p id="nimAdverse">L'adversaire reflechit</p>`
+
     setTimeout(function() {
         document.getElementById("nimAdverse").innerHTML = 
             `<p id="nimAdverse">L'adversaire reflechit .</p>`
@@ -69,7 +67,7 @@ function jouer(){
     nbBatonEnleve = 0;
 }
 
-
+// Affichage d'un nombre aléatoire de batonnet au chargement de la page
 window.addEventListener("load", () => {
     for(i=0; i<nbBatons; i++){
         contener.innerHTML +=
@@ -79,9 +77,9 @@ window.addEventListener("load", () => {
 
 document.getElementById("enleverBatonnet").addEventListener("click", () => {
     
+    // Verification de defaite
     if(nbBatons == 1){
-        alert("Vous avez perdu")
-        window.location.reload()
+        document.getElementById("defaite").style.display = "block"
     }
     
     document.getElementById(`bat${nbBatons-1}`).hidden = true;
@@ -94,10 +92,27 @@ document.getElementById("enleverBatonnet").addEventListener("click", () => {
     }
 })
 
+// Passer la main à l'adversaire
 document.getElementById("passerMain").addEventListener("click", () => {
     if(nbBatonEnleve==0){
-        alert("Veuillez enlever au moins un batonnet")
+        document.getElementById("errorAucunBaton").style.display = "block"
     } else {
         jouer()
     }
+})
+
+// Quitter les écrans de victoire, defaite et erreur
+document.getElementById("victoire").addEventListener("click", () => {
+    document.getElementById("victoire").style.display = "none";
+    window.location.reload()
+})
+
+document.getElementById("defaite").addEventListener("click", () => {
+    document.getElementById("defaite").style.display = "none";
+    window.location.reload()
+})
+
+document.getElementById("errorAucunBaton").addEventListener("click", () => {
+    document.getElementById("errorAucunBaton").style.display = "none";
+    window.location.reload()
 })
