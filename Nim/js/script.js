@@ -114,5 +114,4 @@ document.getElementById("defaite").addEventListener("click", () => {
 
 document.getElementById("errorAucunBaton").addEventListener("click", () => {
     document.getElementById("errorAucunBaton").style.display = "none";
-    window.location.reload()
 })
