@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFC</title>
-    <link rel="stylesheet" href="/Projets/Multigame/style.css">
+    <link rel="stylesheet" href="/multigame/Main/css/style.css">
     <link rel="stylesheet" href="css/stylePfc.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
-        <a href="/Projets/Multigame/index.html">
+        <a href="/Multigame/Main/index.html">
             <p>CASINO</p>
         </a>
     </nav>
@@ -32,11 +32,23 @@
         </div>
 
         <div class="versus">
+            <p>Score</p>
+            <div class="score">
+                <p id="scoreJoueur">0</p>
+                <p>:</p>
+                <p id="scoreOrdi">0</p>
+            </div>
+            
+            
             <p id="resultat">Jouez !</p>
         </div>
 
         <div class="mainAdverse">
-            <p>L'adversaire choisit sa main</p>
+            <div class="robot">
+                <img id="imgRobot" src="/multigame/Main/images/robot/robot_normal.png" alt="img_robot_normal">
+                <p id="messageRobot">Je choisis ma main</p>
+            </div>
+            
             <img id="img_point_intero" class="img_PFC" src="images/point_intero.jpg" alt="img_point_intero">
         </div>
         

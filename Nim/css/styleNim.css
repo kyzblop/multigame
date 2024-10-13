@@ -10,7 +10,7 @@
 
     font-size: x-large;
 
-    background-image: url(/Projets/Multigame/images/tapisTable.jpg);
+    background-image: url(/Multigame/Main/images/tapisTable.jpg);
     background-size: cover;
     background-position: 50% 50%;
 
@@ -21,6 +21,16 @@
     display: flex;
     align-items: center;
     height: 20%;
+
+
+
+}
+
+#nimAdverse{
+    background-image: url(/multigame/Main/images/bulles/img_bulle_sans_fond.png);
+    background-size: 110% 100%;
+
+    padding: 10px 35px 30px 35px;
 }
 
 .batonnets{
