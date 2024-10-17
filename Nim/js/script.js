@@ -5,6 +5,10 @@ let nbBatonEnleveAdverse = 0;
 
 let textAdvsersaire = document.getElementById("nimAdvserse")
 
+// Initialisation de la valeur du stack
+let valeurStack = sessionStorage.getItem("stack")
+document.getElementById("stackValeur").innerText = valeurStack
+
 function jouer(){
 
     // Verifier la victoire
@@ -12,6 +16,7 @@ function jouer(){
         document.getElementById("victoire").style.display = "block"
         document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
         document.getElementById("nimAdverse").innerHTML = "Je veux ma revanche !"
+        
     } else {
         // Cacher les elements du joueur
         document.getElementById("enleverBatonnet").hidden = true;

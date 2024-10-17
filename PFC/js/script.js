@@ -19,6 +19,10 @@ let probaOrdiC = 0;
 
 let nbMain = 0;
 
+// Initialisation de la valeur du stack
+let valeurStack = parseInt(sessionStorage.getItem("stack"))
+document.getElementById("stackValeur").innerText = valeurStack
+
 function choixAdverse(){
     let n = Math.floor(Math.random() * 3)
     
@@ -67,25 +71,42 @@ document.getElementById("pierre").addEventListener("click", () => {
     nbPJoueur += 1;
     nbMain += 1;
 
+    // Resultat en fonction de la main adverse
     switch(mainAdverse){
         case 'pierre':
             resultat = "Egalité"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
         case 'feuille':
             resultat = "Vous avez perdu !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
+
+            // Mise à jour du stack
+            valeurStack -= 5;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
 
         case 'ciseaux':
             resultat = "Vous avez gagné !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
+
+            // Mise à jour du stack
+            valeurStack += 5;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
     }
 
@@ -101,9 +122,12 @@ document.getElementById("feuille").addEventListener("click", () => {
     nbFJoueur += 1;
     nbMain += 1;
 
+    // Resultat en fonction de la main adverse
     switch(mainAdverse){
         case 'pierre':
             resultat = "Vous avez gagné !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
@@ -111,15 +135,24 @@ document.getElementById("feuille").addEventListener("click", () => {
 
         case 'feuille':
             resultat = "Egalité"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
         case 'ciseaux':
             resultat = "Vous avez perdu !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
+
+            // Mise à jour du stack
+            valeurStack -= 5;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
     }
 
@@ -135,16 +168,26 @@ document.getElementById("ciseaux").addEventListener("click", () => {
     nbCJoueur += 1;
     nbMain += 1;
 
+    // Resultat en fonction de la main adverse
     switch(mainAdverse){
         case 'pierre':
             resultat = "Vous avez perdu !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
+
+            // Mise à jour du stack
+            valeurStack -= 5;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
 
         case 'feuille':
             resultat = "Vous avez gagné !"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
@@ -152,6 +195,8 @@ document.getElementById("ciseaux").addEventListener("click", () => {
 
         case 'ciseaux':
             resultat = "Egalité"
+
+            // Mise à jour du robot
             document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
