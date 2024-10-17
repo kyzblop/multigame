@@ -10,7 +10,7 @@ function jouer(){
     // Verifier la victoire
     if(nbBatons == 1){
         document.getElementById("victoire").style.display = "block"
-        document.getElementById("nimAdverseImg").setAttribute("src", "/multigame/Main/images/robot/robot_enerve.png")
+        document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
         document.getElementById("nimAdverse").innerHTML = "Je veux ma revanche !"
     } else {
         // Cacher les elements du joueur
@@ -20,7 +20,7 @@ function jouer(){
 
 
         // L'adversaire reflechit
-        document.getElementById("nimAdverseImg").setAttribute("src", "/multigame/Main/images/robot/robot_dodo.png")
+        document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_dodo.png")
         document.getElementById("nimAdverse").innerHTML = "Laisse moi reflechir "
 
         setTimeout(function() {
@@ -41,7 +41,7 @@ function jouer(){
             document.getElementById("aVousJouer").hidden = false;
             document.getElementById("passerMain").hidden = false;
 
-            document.getElementById("nimAdverseImg").setAttribute("src", "/multigame/Main/images/robot/robot_normal.png")
+            document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_normal.png")
             document.getElementById("nimAdverse").innerHTML = "A toi de jouer"
 
             // Jeu de l'adversaire, s'il peut gagner il gagne, sinon c'est aléatoire
@@ -79,7 +79,7 @@ document.getElementById("enleverBatonnet").addEventListener("click", () => {
     if(nbBatons == 1){
         document.getElementById(`bat${nbBatons-1}`).hidden = true;
         document.getElementById("defaite").style.display = "block"
-        document.getElementById("nimAdverseImg").setAttribute("src", "/multigame/Main/images/robot/robot_moqueur.png")
+        document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
         document.getElementById("nimAdverse").innerHTML = "Gros nulos !"
     } else {
         document.getElementById(`bat${nbBatons-1}`).hidden = true;
@@ -98,7 +98,7 @@ document.getElementById("enleverBatonnet").addEventListener("click", () => {
 document.getElementById("passerMain").addEventListener("click", () => {
     if(nbBatonEnleve==0){
         document.getElementById("errorAucunBaton").style.display = "block"
-        document.getElementById("nimAdverseImg").setAttribute("src", "/multigame/Main/images/robot/robot_enerve.png")
+        document.getElementById("nimAdverseImg").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
         document.getElementById("nimAdverse").innerHTML = "N'essais pas de tricher !"
     } else {
         jouer()

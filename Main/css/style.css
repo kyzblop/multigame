@@ -10,10 +10,14 @@ body{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
 
-    background-image: url(/multigame/Main/images/img_casino.png);
+    background-image: url(/Projets/multigame/Main/images/img_casino.png);
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
+}
+
+::-webkit-scrollbar{
+    width: 0;
 }
 
 .bienvenue{
@@ -33,7 +37,7 @@ body{
     width: 350px;
     height: 100px;
 
-    background-image: url(/multigame/Main/images/bulles/img_bulle_sans_fond.png);
+    background-image: url(/Projets/multigame/Main/images/bulles/img_bulle_sans_fond.png);
     background-size: 450px 200px;
 
     padding: 10px 40px 80px 40px;
@@ -54,6 +58,7 @@ a{
 
     justify-content: center;
     height: 100px;
+    align-items: center;
 
     background: linear-gradient(red, transparent);
     font-size: x-large;
@@ -61,13 +66,41 @@ a{
     padding-left: 20px;
 }
 
-main{
-    margin: 100px 15% 100px 15%;
+.navbar a{
+    flex:1;
+}
 
+.stack{
     display: flex;
     flex-direction: row;
+    position: absolute;
+    right: 15px;
 
-    justify-content: space-around;
+    align-items: center;
+
+    font-size: large;
+    letter-spacing: normal;
+}
+
+.stack img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+main{
+    margin: 100px 15% 100px 15%;
+}
+
+.grilleCard{
+    list-style: none;
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    justify-items: center;
+    
 }
 
 .card{
@@ -83,7 +116,7 @@ main{
 
     border-radius: 5%;
 
-    background-image: url(/multigame/Main/images/tablePoker.jpg);
+    background-image: url(/Projets/multigame/Main/images/tablePoker.jpg);
     background-size: cover;
     background-position: 50% 50%;
 }

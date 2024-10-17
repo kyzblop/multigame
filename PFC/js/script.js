@@ -70,20 +70,20 @@ document.getElementById("pierre").addEventListener("click", () => {
     switch(mainAdverse){
         case 'pierre':
             resultat = "Egalité"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
         case 'feuille':
             resultat = "Vous avez perdu !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
         break;
 
         case 'ciseaux':
             resultat = "Vous avez gagné !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
         break;
@@ -104,20 +104,20 @@ document.getElementById("feuille").addEventListener("click", () => {
     switch(mainAdverse){
         case 'pierre':
             resultat = "Vous avez gagné !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
         break;
 
         case 'feuille':
             resultat = "Egalité"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
         case 'ciseaux':
             resultat = "Vous avez perdu !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
         break;
@@ -138,21 +138,21 @@ document.getElementById("ciseaux").addEventListener("click", () => {
     switch(mainAdverse){
         case 'pierre':
             resultat = "Vous avez perdu !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
         break;
 
         case 'feuille':
             resultat = "Vous avez gagné !"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
         break;
 
         case 'ciseaux':
             resultat = "Egalité"
-            document.getElementById("imgRobot").setAttribute("src", "/multigame/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Projets/multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
     }
