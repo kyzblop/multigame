@@ -77,7 +77,7 @@ document.getElementById("pierre").addEventListener("click", () => {
             resultat = "Egalité"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
@@ -85,7 +85,7 @@ document.getElementById("pierre").addEventListener("click", () => {
             resultat = "Vous avez perdu !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
 
@@ -99,7 +99,7 @@ document.getElementById("pierre").addEventListener("click", () => {
             resultat = "Vous avez gagné !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
 
@@ -128,7 +128,7 @@ document.getElementById("feuille").addEventListener("click", () => {
             resultat = "Vous avez gagné !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
         break;
@@ -137,7 +137,7 @@ document.getElementById("feuille").addEventListener("click", () => {
             resultat = "Egalité"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
 
@@ -145,7 +145,7 @@ document.getElementById("feuille").addEventListener("click", () => {
             resultat = "Vous avez perdu !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
 
@@ -174,7 +174,7 @@ document.getElementById("ciseaux").addEventListener("click", () => {
             resultat = "Vous avez perdu !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_moqueur.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_moqueur.png")
             document.getElementById("messageRobot").innerHTML =  "Loser !"
             ptOrdi += 1;
 
@@ -188,7 +188,7 @@ document.getElementById("ciseaux").addEventListener("click", () => {
             resultat = "Vous avez gagné !"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_enerve.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
         break;
@@ -197,7 +197,7 @@ document.getElementById("ciseaux").addEventListener("click", () => {
             resultat = "Egalité"
 
             // Mise à jour du robot
-            document.getElementById("imgRobot").setAttribute("src", "/Main/images/robot/robot_croix.png")
+            document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_croix.png")
             document.getElementById("messageRobot").innerHTML =  "Pareil !"
         break;
     }

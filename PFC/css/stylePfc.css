@@ -10,7 +10,7 @@
 
     font-size: x-large;
 
-    background-image: url(/Main/images/tapisTable.jpg);
+    background-image: url(/Multigame/Main/images/tapisTable.jpg);
     background-size: cover;
     background-position: 50% 50%;
 
@@ -103,7 +103,7 @@
 #messageRobot{
     display: flex;
 
-    background-image: url("/Main/images/bulles/img_bulle_sans_fond.png");
+    background-image: url("/Multigame/Main/images/bulles/img_bulle_sans_fond.png");
     background-size: 100% 100%;
     
     height: 80px;

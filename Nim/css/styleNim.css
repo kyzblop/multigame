@@ -10,7 +10,7 @@
 
     font-size: x-large;
 
-    background-image: url(/Main/images/tapisTable.jpg);
+    background-image: url(/Multigame/Main/images/tapisTable.jpg);
     background-size: cover;
     background-position: 50% 50%;
 
@@ -27,7 +27,7 @@
 }
 
 #nimAdverse{
-    background-image: url(/Main/images/bulles/img_bulle_sans_fond.png);
+    background-image: url(/Multigame/Main/images/bulles/img_bulle_sans_fond.png);
     background-size: 110% 100%;
 
     padding: 10px 35px 30px 35px;
