@@ -18,10 +18,18 @@ body {
     align-items: center;
 
     height: 100px;
-    border: solid 2px black;
 
+    font-size: 50px;
+    color: rgb(234, 234, 234);
+    font-weight: bold;
+    letter-spacing: 20px;
 }
 
 .boutonCentre{
     width: 80%;
+}
+
+.boutonCentre:hover{
+    background-color: rgba(255, 255, 255, 0.311);
+    
 }

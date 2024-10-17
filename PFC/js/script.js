@@ -26,6 +26,7 @@ document.getElementById("stackValeur").innerText = valeurStack
 function choixAdverse(){
     let n = Math.floor(Math.random() * 3)
     
+    // Choix aleatoire de la main
     if(nbMain == 0){
         if(n == 0){
             mainAdverse = "pierre"
@@ -51,6 +52,7 @@ function choixAdverse(){
 
         n = Math.random();
 
+        // Repartition de l'aléatoire en fonction des proba définies
         if(n < probaOrdiP){
             mainAdverse = "pierre"
             document.getElementById("img_point_intero").setAttribute("src", "images/pierre.jpg") 
@@ -202,6 +204,7 @@ document.getElementById("ciseaux").addEventListener("click", () => {
         break;
     }
 
+    // Affichage des resultats
     document.getElementById("resultat").innerHTML = resultat
     document.getElementById("scoreJoueur").innerHTML = ptJoueur
     document.getElementById("scoreOrdi").innerHTML = ptOrdi

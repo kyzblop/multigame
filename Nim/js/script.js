@@ -6,7 +6,7 @@ let nbBatonEnleveAdverse = 0;
 let textAdvsersaire = document.getElementById("nimAdvserse")
 
 // Initialisation de la valeur du stack
-let valeurStack = sessionStorage.getItem("stack")
+let valeurStack = parseInt(sessionStorage.getItem("stack"))
 document.getElementById("stackValeur").innerText = valeurStack
 
 function jouer(){
@@ -16,6 +16,11 @@ function jouer(){
         document.getElementById("victoire").style.display = "block"
         document.getElementById("nimAdverseImg").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
         document.getElementById("nimAdverse").innerHTML = "Je veux ma revanche !"
+
+        // Mise à jour du stack
+        valeurStack += 15;
+        sessionStorage.setItem("stack", valeurStack)
+        document.getElementById("stackValeur").innerText = valeurStack
         
     } else {
         // Cacher les elements du joueur
@@ -66,8 +71,6 @@ function jouer(){
         // Reset du nombre de baton enlevé par le joueur
         nbBatonEnleve = 0;
     }
-
-    
 }
 
 // Affichage d'un nombre aléatoire de batonnet au chargement de la page
@@ -86,6 +89,11 @@ document.getElementById("enleverBatonnet").addEventListener("click", () => {
         document.getElementById("defaite").style.display = "block"
         document.getElementById("nimAdverseImg").setAttribute("src", "/Multigame/Main/images/robot/robot_moqueur.png")
         document.getElementById("nimAdverse").innerHTML = "Gros nulos !"
+
+        // Mise à jour du stack
+        valeurStack -= 15;
+        sessionStorage.setItem("stack", valeurStack)
+        document.getElementById("stackValeur").innerText = valeurStack
     } else {
         document.getElementById(`bat${nbBatons-1}`).hidden = true;
         nbBatons --;
