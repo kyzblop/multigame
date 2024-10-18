@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin: 100px 15% 100px 15%;
+    margin: 100px 15% 10px 15%;
     height: 350px;
 
     font-size: x-large;
@@ -111,6 +111,38 @@
     padding: 30px 30px 0 20px;
 
     font-size: large;
+}
+
+.mise{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#miseText{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 5px 0 5px;
+    width: 100px;
+}
+
+/* Icones de fontawesome, ne pas oublier le lien en debut de doc HTML pour lire les codes icones */
+.fontawesome {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif;
+    font-weight: 900;
+
+    font-size: xx-large;
+}
+
+#iconJeton{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
 }
 
 

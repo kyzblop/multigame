@@ -19,6 +19,8 @@ let probaOrdiC = 0;
 
 let nbMain = 0;
 
+let valeurMise = 100;
+
 // Initialisation de la valeur du stack
 let valeurStack = parseInt(sessionStorage.getItem("stack"))
 document.getElementById("stackValeur").innerText = valeurStack
@@ -92,7 +94,7 @@ document.getElementById("pierre").addEventListener("click", () => {
             ptOrdi += 1;
 
             // Mise à jour du stack
-            valeurStack -= 5;
+            valeurStack -= valeurMise;
             sessionStorage.setItem("stack", valeurStack)
             document.getElementById("stackValeur").innerText = valeurStack
         break;
@@ -106,7 +108,7 @@ document.getElementById("pierre").addEventListener("click", () => {
             ptJoueur += 1;
 
             // Mise à jour du stack
-            valeurStack += 5;
+            valeurStack += valeurMise;
             sessionStorage.setItem("stack", valeurStack)
             document.getElementById("stackValeur").innerText = valeurStack
         break;
@@ -133,6 +135,11 @@ document.getElementById("feuille").addEventListener("click", () => {
             document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
+
+            // Mise à jour du stack
+            valeurStack += valeurMise;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
 
         case 'feuille':
@@ -152,7 +159,7 @@ document.getElementById("feuille").addEventListener("click", () => {
             ptOrdi += 1;
 
             // Mise à jour du stack
-            valeurStack -= 5;
+            valeurStack -= valeurMise;
             sessionStorage.setItem("stack", valeurStack)
             document.getElementById("stackValeur").innerText = valeurStack
         break;
@@ -181,7 +188,7 @@ document.getElementById("ciseaux").addEventListener("click", () => {
             ptOrdi += 1;
 
             // Mise à jour du stack
-            valeurStack -= 5;
+            valeurStack -= valeurMise;
             sessionStorage.setItem("stack", valeurStack)
             document.getElementById("stackValeur").innerText = valeurStack
         break;
@@ -193,6 +200,11 @@ document.getElementById("ciseaux").addEventListener("click", () => {
             document.getElementById("imgRobot").setAttribute("src", "/Multigame/Main/images/robot/robot_enerve.png")
             document.getElementById("messageRobot").innerHTML =  "Je vais t'avoir !"
             ptJoueur += 1;
+
+            // Mise à jour du stack
+            valeurStack += valeurMise;
+            sessionStorage.setItem("stack", valeurStack)
+            document.getElementById("stackValeur").innerText = valeurStack
         break;
 
         case 'ciseaux':
@@ -208,4 +220,23 @@ document.getElementById("ciseaux").addEventListener("click", () => {
     document.getElementById("resultat").innerHTML = resultat
     document.getElementById("scoreJoueur").innerHTML = ptJoueur
     document.getElementById("scoreOrdi").innerHTML = ptOrdi
+})
+
+// Gestion de la mise
+document.getElementById("miseValeur").innerHTML = valeurMise
+
+// Augmentation de la mise
+document.getElementById("iconPlus").addEventListener("click", () => {
+    if(valeurMise <= (valeurStack - 50)){
+        valeurMise += 50
+        document.getElementById("miseValeur").innerHTML = valeurMise
+    }
+})
+
+// Diminution de la mise
+document.getElementById("iconMoins").addEventListener("click", () => {
+    if(valeurMise > 50){
+        valeurMise -= 50
+        document.getElementById("miseValeur").innerHTML = valeurMise
+    }
 })

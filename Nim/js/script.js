@@ -5,6 +5,8 @@ let nbBatonEnleveAdverse = 0;
 
 let textAdvsersaire = document.getElementById("nimAdvserse")
 
+let valeurMise = 100;
+
 // Initialisation de la valeur du stack
 let valeurStack = parseInt(sessionStorage.getItem("stack"))
 document.getElementById("stackValeur").innerText = valeurStack
@@ -18,7 +20,7 @@ function jouer(){
         document.getElementById("nimAdverse").innerHTML = "Je veux ma revanche !"
 
         // Mise à jour du stack
-        valeurStack += 15;
+        valeurStack += valeurMise;
         sessionStorage.setItem("stack", valeurStack)
         document.getElementById("stackValeur").innerText = valeurStack
         
@@ -82,6 +84,9 @@ window.addEventListener("load", () => {
 })
 
 document.getElementById("enleverBatonnet").addEventListener("click", () => {
+
+    // Enlever la modification de la mise
+    document.getElementById("votreMise").hidden = true;
     
     // Verification de defaite
     if(nbBatons == 1){
@@ -91,7 +96,7 @@ document.getElementById("enleverBatonnet").addEventListener("click", () => {
         document.getElementById("nimAdverse").innerHTML = "Gros nulos !"
 
         // Mise à jour du stack
-        valeurStack -= 15;
+        valeurStack -= valeurMise;
         sessionStorage.setItem("stack", valeurStack)
         document.getElementById("stackValeur").innerText = valeurStack
     } else {
@@ -131,4 +136,24 @@ document.getElementById("defaite").addEventListener("click", () => {
 
 document.getElementById("errorAucunBaton").addEventListener("click", () => {
     document.getElementById("errorAucunBaton").style.display = "none";
+})
+
+
+// Gestion de la mise
+document.getElementById("miseValeur").innerHTML = valeurMise
+
+// Augmentation de la mise
+document.getElementById("iconPlus").addEventListener("click", () => {
+    if(valeurMise <= (valeurStack - 50)){
+        valeurMise += 50
+        document.getElementById("miseValeur").innerHTML = valeurMise
+    }
+})
+
+// Diminution de la mise
+document.getElementById("iconMoins").addEventListener("click", () => {
+    if(valeurMise > 50){
+        valeurMise -= 50
+        document.getElementById("miseValeur").innerHTML = valeurMise
+    }
 })
