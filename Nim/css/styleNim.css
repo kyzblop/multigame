@@ -51,6 +51,8 @@ button{
     width: 100px;
 }
 
+
+/* Gestion de la mise du joueur */
 .mise{
     display: flex;
 

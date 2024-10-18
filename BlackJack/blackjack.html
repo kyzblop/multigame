@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nim</title>
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="css/styleBJ.css">
     <link rel="stylesheet" href="/Multigame/Main/css/style.css">
-    <link rel="stylesheet" href="css/styleNim.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="js/scriptNim.js" defer></script>
+    <script src="js/scripBJ.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -26,34 +26,22 @@
         </div>
     </nav>
 
-    <div class="overlay" id="victoire">
-        <p class="overlayText">Vous avez gagné !</p>
-    </div>
-
-    <div class="overlay" id="defaite">
-        <p class="overlayText">Vous avez perdu !</p>
-    </div>
-
-    <div class="overlay" id="errorAucunBaton">
-        <p class="overlayText">Veuillez enlever au moins un batonnet</p>
-    </div>
-
-
-    <div class="nim">
-        <div class="nimAdverse">
-            <img id="nimAdverseImg" src="/Multigame/Main/images/robot/robot_normal.png" alt="img_robot_normal">
-            <p id="nimAdverse">Tu peux commencer</p>
+    <div class="blackjack">
+        <div class="mainCroupier">
+            <p id="cartesCroupier">21</p>
         </div>
-        <div class="batonnets" id="nimBatons"></div>
-        <div class="nimJoueur" id="nimJoueur">
-            <button class="bouton" id="enleverBatonnet">
-                Elever un batonnet
-            </button>
-            <p id="aVousJouer">A vous de jouer</p>
-            <button class="bouton" id="passerMain">
-                Passer la main
-            </button>
+
+        <div class="votreMain">
+            <p id="cartesJoueur">10</p>
+
+            <div>
+                <button id="btnCarte">Carte</button>
+                <button id="btnDouble">Doubler</button>
+                <button id="btnSplit">Split</button>
+            </div>
         </div>
+
+
     </div>
 
     <div id="votreMise">
@@ -69,5 +57,6 @@
         </div>
         
     </div>
+
 </body>
 </html>
